@@ -1,0 +1,30 @@
+" Syntax Highlighting
+syntax on
+filetype plugin on
+filetype plugin indent on
+
+set wildmenu " display all mathcing files when we tab complete
+set path+=** " search down into subfolders
+set nocompatible " enter the current millenium
+set number " Relative Line Numbers
+set laststatus=2 " Status Bar
+set ruler
+set backspace=indent,eol,start "Backspacing all the way 
+set mouse=a
+
+" Indenting
+set expandtab
+set autoindent
+set smartindent
+
+" Use jj as escape key
+inoremap jj <Esc> " Remap ESC to jk
+
+" ---- Plugins ---- "
+call plug#begin('~/.vim/plugged')
+
+" Commenting out quickly
+Plug 'preservim/nerdcommenter'
+
+call plug#end()
+
