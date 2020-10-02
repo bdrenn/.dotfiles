@@ -1,9 +1,13 @@
 # .dotfiles
 
 # For New Computers
-git clone --bare https://www.github.com/bdrenn/.dotfiles.git $HOME/.dotfiles.git
+```bash
+git clone --bare https://github.com/bdrenn/.dotfiles.git $HOME/.dotfiles
 dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
+```
 
 # Alias 
-echo 'alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"' >> $HOME/.zshrc
+```bash
+alias dotfiles='/usr/local/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+```
