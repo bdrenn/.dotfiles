@@ -1,3 +1,20 @@
+" - Vimrc -
+
+
+" ---- Plugins ---- "
+call plug#begin('~/.vim/plugged')
+
+" Autocomplete pairs 
+Plug 'jiangmiao/auto-pairs'
+
+" NerdTree (Explorer)"
+Plug 'preservim/nerdtree'
+
+" Commenting out quickly
+Plug 'preservim/nerdcommenter'
+
+call plug#end()
+
 " Syntax Highlighting
 syntax on
 filetype plugin on
@@ -17,14 +34,9 @@ set expandtab
 set autoindent
 set smartindent
 
+"NerdTree"
+autocmd VimEnter * NERDTree
+
 " Use jj as escape key
 inoremap jj <Esc> " Remap ESC to jk
-
-" ---- Plugins ---- "
-call plug#begin('~/.vim/plugged')
-
-" Commenting out quickly
-Plug 'preservim/nerdcommenter'
-
-call plug#end()
 
