@@ -1,16 +1,15 @@
 " - Vimrc -
 
-
 " ---- Plugins ---- "
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
-"Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 call plug#end()
 
 " Syntax Highlighting
-syntax enable 
+syntax on
 filetype plugin on
 filetype plugin indent on
 
@@ -28,8 +27,9 @@ set expandtab
 set autoindent
 set smartindent
 
-"NerdTree"
+" ----- NerdTree ----"
 nmap <F6> :NERDTreeToggle<CR>
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " Use jj as escape key
 inoremap jj <Esc> " Remap ESC to jk
