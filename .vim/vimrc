@@ -3,20 +3,14 @@
 
 " ---- Plugins ---- "
 call plug#begin('~/.vim/plugged')
-
-" Autocomplete pairs 
-Plug 'jiangmiao/auto-pairs'
-
-" NerdTree (Explorer)"
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
-
-" Commenting out quickly
-Plug 'preservim/nerdcommenter'
-
+"Plug 'preservim/nerdcommenter'
 call plug#end()
 
 " Syntax Highlighting
-syntax on
+syntax enable 
 filetype plugin on
 filetype plugin indent on
 
@@ -35,8 +29,15 @@ set autoindent
 set smartindent
 
 "NerdTree"
-autocmd VimEnter * NERDTree
+nmap <F6> :NERDTreeToggle<CR>
 
 " Use jj as escape key
 inoremap jj <Esc> " Remap ESC to jk
 
+" ---- Coc ----- "
+" Use tab for trigger completion with characters ahead and navigate.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
