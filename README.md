@@ -9,5 +9,5 @@ dotfiles config --local status.showUntrackedFiles no
 
 # Alias 
 ```bash
-alias dotfiles='/usr/local/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='/home/linuxbrew/.linuxbrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
