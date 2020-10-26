@@ -27,19 +27,13 @@ set expandtab
 set autoindent
 set smartindent
 
+" Filetypes
+au BufRead,BufNewFile *.tf set filetype=terraform
+
 " ----- NerdTree ----"
 nmap <F6> :NERDTreeToggle<CR>
 let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " Use jj as escape key
 inoremap jj <Esc> " Remap ESC to jk
-
-" ---- Coc ----- "
-" Use tab for trigger completion with characters ahead and navigate.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
 
