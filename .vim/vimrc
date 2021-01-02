@@ -1,13 +1,5 @@
 " - Vimrc -
 
-" ---- Plugins ---- "
-call plug#begin('~/.vim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jiangmiao/auto-pairs'
-Plug 'preservim/nerdtree'
-Plug 'preservim/nerdcommenter'
-call plug#end()
-
 " Syntax Highlighting
 syntax on
 filetype plugin on
@@ -16,23 +8,18 @@ filetype plugin indent on
 set wildmenu " display all mathcing files when we tab complete
 set path+=** " search down into subfolders
 set nocompatible " enter the current millenium
-set number " Relative Line Numbers
+set number
 set laststatus=2 " Status Bar
-set ruler
 set backspace=indent,eol,start "Backspacing all the way 
-set mouse=a
+set mouse=n
 
 " Indenting
 set expandtab
 set autoindent
 set smartindent
 
-" Filetypes
-au BufRead,BufNewFile *.tf set filetype=terraform
-
-" ----- NerdTree ----"
-nmap <F6> :NERDTreeToggle<CR>
-let g:NERDTreeNodeDelimiter = "\u00a0"
+" Color correction Tmux 
+colorscheme slate
 
 " Use jj as escape key
 inoremap jj <Esc> " Remap ESC to jk
