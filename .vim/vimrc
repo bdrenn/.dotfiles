@@ -20,6 +20,8 @@ set smartindent
 
 " Color correction Tmux 
 colorscheme slate
+hi Comment ctermfg=34
+
 
 " Use jj as escape key
 inoremap jj <Esc> " Remap ESC to jk
