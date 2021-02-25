@@ -1,5 +1,11 @@
 " - Vimrc -
 
+
+call plug#begin()
+  Plug 'preservim/nerdtree'
+  Plug 'vim-python/python-syntax'
+call plug#end()
+
 " Syntax Highlighting
 syntax on
 filetype plugin on
@@ -22,7 +28,12 @@ set smartindent
 colorscheme slate
 hi Comment ctermfg=34
 
-
 " Use jj as escape key
 inoremap jj <Esc> " Remap ESC to jk
 
+" -------- Nerd Tree -------- "
+" Toggle F6
+nmap <F6> :NERDTreeToggle<CR>
+
+# Good Python Syntax Highlighting
+let g:python_highlight_all = 1
