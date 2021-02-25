@@ -35,5 +35,5 @@ inoremap jj <Esc> " Remap ESC to jk
 " Toggle F6
 nmap <F6> :NERDTreeToggle<CR>
 
-# Good Python Syntax Highlighting
+" ------- python-syntax ----- "
 let g:python_highlight_all = 1
