@@ -7,6 +7,7 @@ call plug#begin()
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'rakr/vim-one'
 call plug#end()
 
 " Automatic reloading of .vimrc
@@ -46,11 +47,13 @@ map <c-h> <c-w>h
 vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
 
-" Color correction Tmux 
-colorscheme industry
+" Colors: Install Atom-one-dark for consistent terminal colors
+colorscheme one
+set background=dark
+set termguicolors
 
 " Use jj as escape key
-inoremap jj <Esc> " Remap ESC to jk
+inoremap jj <Esc>
 
 " -------- Nerd Tree -------- "
 " Toggle F6
@@ -61,7 +64,7 @@ let g:python_highlight_all = 1
 
 " ---- FZF ------ "
 nmap <C-P> :GFiles<CR>
-nmap <C-F> :Files<CR>
+nmap <C-F> :FZF<CR>
 nnoremap <C-g> :Rg<Cr>
 
 " ---- COC ----- "
