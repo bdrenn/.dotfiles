@@ -48,9 +48,9 @@ vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
 
 " Colors: Install Atom-one-dark for consistent terminal colors
-colorscheme one
-set background=dark
-highlight Normal guibg=#1d1f22
+"colorscheme one
+"set background=dark
+"highlight Normal guibg=#1d1f22
 set termguicolors
 
 " Use jj as escape key

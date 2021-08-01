@@ -11,3 +11,7 @@ dotfiles config --local status.showUntrackedFiles no
 ```bash
 alias dotfiles='/home/linuxbrew/.linuxbrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
+
+# Ensure that "Use Option as Meta Key" is checked from within the Terminal preferences. If it's not, tmux pane switching won't work. If using Iterm2, go to Profiles->Keys and change "left optionkey" to Esc+.
+
+# Download the One-dark color theme for matching vim and terminal colors.
